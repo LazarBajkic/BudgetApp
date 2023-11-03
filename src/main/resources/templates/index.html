@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+ 
+    <title>Title</title>
+</head>
+
+<body>
+
+<div class="mx-auto" style="width: 500px;">
+	
+	<h1><b>Your personal budget app</b></h1>
+	
+	<a th:href="@{/Expenses}" class="btn btn-info btn-lg w-100 mb-5 mt-5">Expenses</a>
+	<br>
+	<a th:href="@{/Income}" class="btn btn-info btn-lg w-100 mb-5">Income</a>
+	<br>
+	<a th:href="@{/Analytics}" class="btn btn-info btn-lg w-100 mb-5">Analytics</a>
+	
+</div>
+
+</body>
+</html>

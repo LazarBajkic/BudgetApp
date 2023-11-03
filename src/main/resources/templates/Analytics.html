@@ -1,0 +1,123 @@
+<html lang="en" xmlns:th="https://thymeleaf.org">
+<head>
+<title>Insert title here</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+	
+		<div class="container d-flex" style="width: 2000px;">
+			
+				<table class="table table-bordered table-stripped">
+			
+			<thead>
+				
+				<tr>
+					<th>ID</th>
+					<th>Expense name</th>
+					<th>Expense coverage</th>
+					<th>Expense cost</th>
+		
+				</tr>
+				
+			</thead>
+			<tbody>
+				
+				<tr th:each="expense: ${expenses}">
+				
+				<td th:text="${expense.getId}"></td>	
+				<td th:text="${expense.getExpenseName}"></td>		
+				<td th:text="${expense.getExpenseCoverage}"></td>		
+				<td th:text="${expense.getExpenseCost}"></td>							
+					
+				</tr>
+									
+			</tbody>
+			
+		</table>
+		
+			<table class="table table-bordered table-stripped ml-4">
+		
+		<thead>
+			
+			<tr>
+				<th>Income id</th>
+				<th>Income name</th>
+				<th>Income value</th>
+			</tr>
+		
+		</thead>
+		
+		<tbody>
+			
+			<tr th:each="income: ${incomes}">
+				
+				<td th:text="${income.getId}"></td>
+				<td th:text="${income.getSourceName}"></td>
+				<td th:text="${income.getSourceValue}"></td>
+									
+			</tr>
+			
+		</tbody>
+		
+	</table>
+	
+		
+</div>
+
+<div class="container d-flex" style="width: 2000px;">
+	
+	<table class="table table-bordered table-stripped">
+			
+			<thead>
+				
+				<tr>
+				
+					<th>Total expenses</th>
+					
+				</tr>
+				
+			</thead>
+			
+			<tbody>
+			
+			<tr align="center" th:each="totalExpenses : ${totalExpenses}">
+				<td th:text="${totalExpenses}">Total expenses</td>
+			</tr>
+			
+			</tbody>
+			
+		</table>
+	
+	<table class="table table-bordered table-stripped ml-4">
+		
+		<thead>
+			
+			<tr>
+			<th>Total income generated</th>
+			</tr>
+			
+		</thead>
+		
+		<tbody>
+			
+			<tr align="center" th:each="totalIncomeValue : ${totalIncomeValue}">
+			<td th:text="${totalIncomeValue}">Total Income</td>
+			</tr>
+			
+		</tbody>
+		
+	</table>
+	
+</div>
+
+<div class="container text-center" style="width: 250px;">
+	
+	<p>Your current earnings are</p>
+	<h1 th:text="${earnings}"></h1>
+	<p>Your savings every month right now are</p>
+	<h3 th:text="${savingsPercent}+'%'"></h3>
+
+</div>
+
+</body>
+</html>

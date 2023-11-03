@@ -1,0 +1,69 @@
+<html lang="en" xmlns:th="https://thymeleaf.org">
+	
+	<head>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	
+	</head>
+	
+	<body>
+	
+			<div class="container">
+			
+			<h1>Your expenses</h1>
+			
+			<p>Here are listed all your expenses,each expense can be edited by pressing the "Edit" button next to the desired expense.</p>
+			
+			<div class="container d-flex mb-4">
+			
+			<a th:href="@{/Expenses}" class="btn btn-info mr-4">All</a>
+			<a th:href="@{/getDailyExpenses}" class="btn btn-info mr-4">Daily</a>
+			<a th:href="@{/getWeeklyExpenses}" class="btn btn-info mr-4">Weekly</a>
+			<a th:href="@{/getMonthlyExpenses}" class="btn btn-info">Monthly</a>
+			
+			</div>
+			
+									
+					<table class="table table-bordered table-stripped">
+			
+			<thead>
+				
+				<tr>
+					<th>ID</th>
+					<th>Expense name</th>
+					<th>Expense coverage</th>
+					<th>Expense cost</th>
+				</tr>
+				
+			</thead>
+			<tbody>
+				
+				<tr th:each="expense: ${expenses}">
+				
+				<td th:text="${expense.getId}"></td>	
+				<td th:text="${expense.getExpenseName}"></td>		
+				<td th:text="${expense.getExpenseCoverage}"></td>		
+				<td th:text="${expense.getExpenseCost}"></td>							
+					
+					<td>
+					<a th:href="@{/editExpense(id=${expense.id})}" class="btn btn-primary">Edit</a>
+					</td>
+					
+					<td>
+					<a th:href="@{/deleteExpense(id=${expense.id})}" class="btn btn-danger">Delete</a>
+					</td>
+					
+				</tr>
+				
+				
+				
+			</tbody>
+			
+		</table>
+		
+		<a th:href="@{/addNewExpense}">Add new expense</a>
+				
+			</div>
+			
+	</body>
+	
+</html>
