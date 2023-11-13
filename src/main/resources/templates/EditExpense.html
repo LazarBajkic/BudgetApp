@@ -1,7 +1,9 @@
 <html xmlns:th="https://www.thymeleaf.org" >
 	
 	<head>
+	<title>Edit expense</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<link rel="stylesheet" href="MainCss.css">
 </head>
 	
 <body>
@@ -62,13 +64,15 @@
 		<label>Enter expense cost</label>
 		<input type="number" class="form-control" th:field="*{expenseCost}" value="${expense.expenseCost}">
 		
-		<br>
-		<button type="submit" class="btn btn-warning btn-sm" >Confirm edit</button>
+		<button type="submit" class="UtilBtn mt-3">Confirm edit</button>
 		
 	</form>
 		
 	</div>
 	
+	<a th:href="@{/Expenses}">
+	<button type="submit" class="UtilBtn">Expenses</button>
+	</a>
 		
 	</div>
 	

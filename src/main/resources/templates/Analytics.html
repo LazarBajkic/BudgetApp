@@ -1,7 +1,8 @@
 <html lang="en" xmlns:th="https://thymeleaf.org">
 <head>
-<title>Insert title here</title>
+<title>Analytics</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" href="MainCss.css">
 </head>
 <body>
 	
@@ -110,13 +111,17 @@
 	
 </div>
 
-<div class="container text-center" style="width: 250px;">
+<div class="container text-center" style="width: 500px;">
 	
 	<p>Your current earnings are</p>
 	<h1 th:text="${earnings}"></h1>
-	<p>Your savings every month right now are</p>
-	<h3 th:text="${savingsPercent}+'%'"></h3>
-
+	<h3 th:text="'Currently every month you gain ' +  ${savingsPercent}+'%' + ' earnings'"></h3>
+	
+	<a th:href="@{/backToHomePage}">
+	<button type="submit" class="UtilBtn mt-5">Back to home page</button>
+	</a>
+	
+	
 </div>
 
 </body>

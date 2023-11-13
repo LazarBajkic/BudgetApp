@@ -2,9 +2,9 @@
 	
 	<head>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-	
+	<link rel="stylesheet" href="MainCss.css">
 	</head>
-	
+	<title>Expenses</title>
 	<body>
 	
 			<div class="container">
@@ -15,10 +15,21 @@
 			
 			<div class="container d-flex mb-4">
 			
-			<a th:href="@{/Expenses}" class="btn btn-info mr-4">All</a>
-			<a th:href="@{/getDailyExpenses}" class="btn btn-info mr-4">Daily</a>
-			<a th:href="@{/getWeeklyExpenses}" class="btn btn-info mr-4">Weekly</a>
-			<a th:href="@{/getMonthlyExpenses}" class="btn btn-info">Monthly</a>
+			<a th:href="@{/Expenses}" class="mr-4">
+			<button type="submit" class="UtilBtn">All</button>
+			</a>
+			
+			<a th:href="@{/getDailyExpenses}" class="mr-4">
+			<button type="submit" class="UtilBtn">Daily</button>
+			</a>
+			
+			<a th:href="@{/getWeeklyExpenses}" class="mr-4">
+			<button type="submit" class="UtilBtn">Weekly</button>
+			</a>
+			
+			<a th:href="@{/getMonthlyExpenses}">
+			<button type="submit" class="UtilBtn">Monthly</button>
+			</a>
 			
 			</div>
 			
@@ -45,11 +56,15 @@
 				<td th:text="${expense.getExpenseCost}"></td>							
 					
 					<td>
-					<a th:href="@{/editExpense(id=${expense.id})}" class="btn btn-primary">Edit</a>
+					<a th:href="@{/editExpense(id=${expense.id})}" >
+					<button type="submit" class="UtilBtn">Edit</button>
+					</a>
 					</td>
 					
 					<td>
-					<a th:href="@{/deleteExpense(id=${expense.id})}" class="btn btn-danger">Delete</a>
+					<a th:href="@{/deleteExpense(id=${expense.id})}" >
+					<button type="submit" class="UtilBtn">Delete</button>
+					</a>
 					</td>
 					
 				</tr>
@@ -60,9 +75,16 @@
 			
 		</table>
 		
-		<a th:href="@{/addNewExpense}">Add new expense</a>
-				
-			</div>
+		<a th:href="@{/addNewExpense}">
+		<button type="submit" class="UtilBtn">Add new expense</button>
+		</a>
+		
+		<a th:href="@{/backToHomePage}">
+		<button type="submit" class="UtilBtn ml-3">Back to home page</button>
+		</a>
+		
+			
+	</div>
 			
 	</body>
 	

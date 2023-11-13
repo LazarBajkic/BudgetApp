@@ -1,0 +1,64 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@700&family=Pathway+Gothic+One&family=Roboto&family=Space+Grotesk:wght@500&display=swap');
+
+body{
+	background-image: url("hexagonbackground.jpg");
+  }
+  
+ h1{
+ font-family: 'Space Grotesk', sans-serif;
+  font-size: 80px;
+  color: #32CD32;
+  text-align: center;
+  text-shadow: 0 0 10px #32CD32, 0 0 20px #32CD32, 0 0 30px #32CD32, 0 0 40px #32CD32, 0 0 50px #32CD32, 0 0 60px #32CD32, 0 0 70px #32CD32;
+ }
+ 
+ h3{
+ font-family: 'Space Grotesk', sans-serif;
+ 	font-size: 40px;
+ 	color: #32CD32;
+    text-align: center;
+    text-shadow: 0 0 10px #32CD32, 0 0 20px #32CD32, 0 0 30px #32CD32, 0 0 40px #32CD32, 0 0 50px #32CD32, 0 0 60px #32CD32, 0 0 70px #32CD32;
+ }
+
+ button{
+ 	font-family: 'Space Grotesk', sans-serif;
+ 	width:470px;	
+ 	height:48px;
+ 	color: #32CD32;
+    text-align: center;
+    text-shadow: 0 0 10px #32CD32, 0 0 20px #32CD32, 0 0 30px #32CD32, 0 0 40px #32CD32, 0 0 50px #32CD32, 0 0 60px #32CD32, 0 0 70px #32CD32;	
+ 	background-image: url("buttonBg.jpg");
+ }
+ 
+ p{
+  	color: #32CD32;
+ 	font-family: 'Space Grotesk', sans-serif;
+ }
+ 
+ table,th,td,tr{
+ 	color: #32CD32;
+ 	background-color: none;
+ 	font-family: 'Space Grotesk', sans-serif;
+ }
+ 
+ .UtilBtn{
+ 	width:175px;	
+ 	height:48px;
+ 	color: #32CD32;
+    text-align: center;
+    text-shadow: 0 0 10px #32CD32, 0 0 20px #32CD32, 0 0 30px #32CD32, 0 0 40px #32CD32, 0 0 50px #32CD32, 0 0 60px #32CD32, 0 0 70px #32CD32;	
+ 	background-image: url("buttonBg.jpg");
+ }
+ 
+ form{
+ 	font-family: 'Space Grotesk', sans-serif;
+ 	background-color: none;
+ 	color: #32CD32;
+ 	
+ }
+ 
+ button:hover{
+ 	    text-shadow: 0 0 10px #4aff15, 0 0 20px #4aff15, 0 0 30px #4aff15, 0 0 40px #4aff15, 0 0 50px #4aff15, 0 0 60px #4aff15, 0 0 70px #4aff15;	
+ 		box-shadow: inset 0 0 100px 100px rgba(128, 128, 128, 0.1);
+ }
